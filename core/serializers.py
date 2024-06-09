@@ -83,3 +83,14 @@ class ComportamentoSerializer(serializers.ModelSerializer):
             'habitat_02',
             'id_pokemon'
         )
+
+class NarradorSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Narrador
+        fields = (
+            'chance_captura',
+            'experience',
+            'id_pokemon'
+        )
+
