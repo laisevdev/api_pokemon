@@ -22,3 +22,16 @@ class CapacidadesSerializer(serializers.ModelSerializer):
             'outras',
             'id_pokemon'
         )
+
+class DeslocamentoSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Capacidades
+        fields = (
+            'terrestre',
+            'escavacao', 
+            'natacao',
+            'subaquatico',
+            'voo',
+            'id_pokemon'
+        )
