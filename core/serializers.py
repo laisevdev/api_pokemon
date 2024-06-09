@@ -47,3 +47,15 @@ class GolpesNaturaisSerializer(serializers.ModelSerializer):
             'id_pokemon'
         )
 
+class AtributosBasaisSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = AtributosBasais
+        fields = (
+            'nome_atributo',
+            'nome_pokemon_01',
+            'nome_pokemon_02', 
+            'atributo_01',
+            'atributo_02',
+            'id_pokemon'
+        )
