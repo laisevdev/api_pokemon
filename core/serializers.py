@@ -59,3 +59,15 @@ class AtributosBasaisSerializer(serializers.ModelSerializer):
             'atributo_02',
             'id_pokemon'
         )
+
+class TiposHabilidadesSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = TiposHabilidades
+        fields = (
+            'tipo_01',
+            'tipo_02',
+            'habilidade_01',
+            'habilidade_02'
+            'id_pokemon'
+        )
