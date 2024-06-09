@@ -71,3 +71,15 @@ class TiposHabilidadesSerializer(serializers.ModelSerializer):
             'habilidade_02'
             'id_pokemon'
         )
+
+class ComportamentoSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        mdoel = Comportamento
+        fields = (
+            'dieta_01', 
+            'dieta_02',
+            'habitat_01',
+            'habitat_02',
+            'id_pokemon'
+        )
