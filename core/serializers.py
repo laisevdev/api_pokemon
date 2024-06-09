@@ -10,3 +10,15 @@ class PokemonSerializer(serializers.ModelSerializer):
             'nome'
             'imagem'
         )
+
+class CapacidadesSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Capacidades 
+        fields = (
+            'forca',
+            'inteligencia',
+            'salto',
+            'outras',
+            'id_pokemon'
+        )
