@@ -94,3 +94,14 @@ class NarradorSerializer(serializers.ModelSerializer):
             'id_pokemon'
         )
 
+class MedidasSerializer(serializers.ModelSerializer):
+
+    class Meta: 
+        model = Medidas
+        fields = (
+            'tamanho_01',
+            'tamanho_02',
+            'categoria_01', 
+            'categoria_02',
+            'id_pokemon'
+        )
