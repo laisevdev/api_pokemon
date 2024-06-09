@@ -35,3 +35,15 @@ class DeslocamentoSerializer(serializers.ModelSerializer):
             'voo',
             'id_pokemon'
         )
+
+class GolpesNaturaisSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = GolpesNaturais
+        fields = (
+            'evolucao',
+            'golpe_01',
+            'golpe_02',
+            'id_pokemon'
+        )
+
