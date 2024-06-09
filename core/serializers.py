@@ -26,7 +26,7 @@ class CapacidadesSerializer(serializers.ModelSerializer):
 class DeslocamentoSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Capacidades
+        model = Deslocamento
         fields = (
             'terrestre',
             'escavacao', 
