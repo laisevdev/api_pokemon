@@ -105,3 +105,14 @@ class MedidasSerializer(serializers.ModelSerializer):
             'categoria_02',
             'id_pokemon'
         )
+
+class ProcriacaoSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Procriacao
+        fields = (
+            'sexo',
+            'grupo_reprodutivo',
+            'incubacao',
+            'id_pokemon'
+        )
