@@ -7,7 +7,7 @@ class PokemonSerializer(serializers.ModelSerializer):
         model = Pokemon
         fields = (
             'id',
-            'nome'
+            'nome_pokemon',
             'imagem'
         )
 
