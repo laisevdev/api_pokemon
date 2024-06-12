@@ -2,7 +2,7 @@ from django.db import models
 
 class Pokemon(models.Model):
     nome_pokemon = models.CharField(max_length=30)
-    imagem = models.ImageField(upload_to=None, height_field=None, width_field=None)
+    imagem = models.BinaryField()
 
 
 class Capacidades(models.Model):
