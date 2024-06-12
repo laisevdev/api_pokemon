@@ -1,7 +1,7 @@
 from django.db import models
 
 class Pokemon(models.Model):
-    nome = models.CharField(max_length=30)
+    nome_pokemon = models.CharField(max_length=30)
     imagem = models.ImageField(upload_to=None, height_field=None, width_field=None)
 
 
