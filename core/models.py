@@ -13,11 +13,7 @@ class Capacidades(models.Model):
     id_pokemon = models.ForeignKey(Pokemon, on_delete=models.CASCADE)
 
 class Deslocamento(models.Model):
-    terrestre = models.IntegerField(null=True)
-    escavacao = models.IntegerField(null=True)
-    natacao = models.IntegerField(null=True)
-    subaquatico = models.IntegerField(null=True)
-    voo = models.IntegerField(null=True)
+    deslocamentos = models.CharField(max_length=60)    
     id_pokemon = models.ForeignKey(Pokemon, on_delete=models.CASCADE)
 
 class GolpesNaturais(models.Model):
