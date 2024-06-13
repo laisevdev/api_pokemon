@@ -28,11 +28,7 @@ class DeslocamentoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Deslocamento
         fields = (
-            'terrestre',
-            'escavacao', 
-            'natacao',
-            'subaquatico',
-            'voo',
+            'deslocamentos',
             'id_pokemon'
         )
 
