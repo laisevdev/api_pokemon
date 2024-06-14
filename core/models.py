@@ -52,10 +52,8 @@ class Narrador(models.Model):
     id_pokemon = models.ForeignKey(Pokemon, on_delete=models.CASCADE)
 
 class Medidas(models.Model):
-    tamanho_01 =  models.CharField(max_length=60)
-    tamanho_02 =  models.CharField(max_length=60, null=True)
-    categoria_01 = models.CharField(max_length=60)
-    categoria_02 = models.CharField(max_length=60, null=True)
+    tamanho =  models.CharField(max_length=60)
+    categoria = models.CharField(max_length=60)
     id_pokemon = models.ForeignKey(Pokemon, on_delete=models.CASCADE)
 
 class Procriacao(models.Model):
