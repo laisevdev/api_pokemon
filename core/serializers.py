@@ -48,12 +48,7 @@ class AtributosBasaisSerializer(serializers.ModelSerializer):
     class Meta:
         model = AtributosBasais
         fields = (
-            'nome_atributo',
-            'nome_pokemon_01',
-            'nome_pokemon_02', 
-            'atributo_01',
-            'atributo_02',
-            'id_pokemon'
+            '__all__'
         )
 
 class TiposHabilidadesSerializer(serializers.ModelSerializer):
@@ -61,11 +56,7 @@ class TiposHabilidadesSerializer(serializers.ModelSerializer):
     class Meta:
         model = TiposHabilidades
         fields = (
-            'tipo_01',
-            'tipo_02',
-            'habilidade_01',
-            'habilidade_02'
-            'id_pokemon'
+                 '__all__'
         )
 
 class ComportamentoSerializer(serializers.ModelSerializer):
