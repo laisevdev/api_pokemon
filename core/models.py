@@ -13,7 +13,7 @@ class Capacidades(models.Model):
     id_pokemon = models.ForeignKey(Pokemon, on_delete=models.CASCADE)
 
 class Deslocamento(models.Model):
-    deslocamentos = models.CharField(max_length=60)    
+    deslocamentos = models.CharField(max_length=60, default='N/A')    
     id_pokemon = models.ForeignKey(Pokemon, on_delete=models.CASCADE)
 
 class GolpesNaturais(models.Model):
@@ -24,18 +24,19 @@ class GolpesNaturais(models.Model):
     
 
 class AtributosBasais(models.Model):
-    nome_atributo = models.CharField(max_length=60)
-    nome_pokemon_01 = models.CharField(max_length=60)
-    nome_pokemon_02 = models.CharField(max_length=60, null=True)
-    atributo_01 = models.IntegerField()
-    atributo_02 = models.IntegerField(null=True)
+    saude =  models.CharField(max_length=60, default='N/A')
+    ataque = models.CharField(max_length=60,  default='N/A')
+    defesa =  models.CharField(max_length=60, default='N/A')
+    ataque_especial =  models.CharField(max_length=60, default='N/A')
+    defesa_especial = models.CharField(max_length=60, default='N/A')
+    velocidade =  models.CharField(max_length=60, default='N/A')
     id_pokemon = models.ForeignKey(Pokemon, on_delete=models.CASCADE)
 
 class TiposHabilidades(models.Model):
-    tipo_01 = models.ImageField(upload_to=None, height_field=None, width_field=None)
-    tipo_02 = models.ImageField(upload_to=None, height_field=None, width_field=None, null=True)
-    habilidade_01 = models.CharField(max_length=60)
-    habilidade_02 = models.CharField(max_length=60, null=True)
+    tipo_01_img = models.ImageField(upload_to=None, height_field=None, width_field=None, null=True)
+    tipo_02_img = models.ImageField(upload_to=None, height_field=None, width_field=None, null=True)
+    habilidade = models.CharField(max_length=60)
+    alta_habilidade = models.CharField(max_length=60, null=True)
     id_pokemon = models.ForeignKey(Pokemon, on_delete=models.CASCADE)
 
 class Comportamento(models.Model):
