@@ -56,7 +56,7 @@ class TiposHabilidadesSerializer(serializers.ModelSerializer):
     class Meta:
         model = TiposHabilidades
         fields = (
-                 '__all__'
+            '__all__'
         )
 
 class ComportamentoSerializer(serializers.ModelSerializer):
@@ -86,11 +86,7 @@ class MedidasSerializer(serializers.ModelSerializer):
     class Meta: 
         model = Medidas
         fields = (
-            'tamanho_01',
-            'tamanho_02',
-            'categoria_01', 
-            'categoria_02',
-            'id_pokemon'
+            '__all__'
         )
 
 class ProcriacaoSerializer(serializers.ModelSerializer):
