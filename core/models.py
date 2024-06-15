@@ -39,10 +39,8 @@ class TiposHabilidades(models.Model):
     id_pokemon = models.ForeignKey(Pokemon, on_delete=models.CASCADE)
 
 class Comportamento(models.Model):
-    dieta_01 = models.CharField(max_length=60)
-    dieta_02 = models.CharField(max_length=60, null=True)
-    habitat_01 = models.CharField(max_length=60)
-    habitat_02 = models.CharField(max_length=60, null=True)
+    dieta = models.CharField(max_length=60, null=True)
+    habitat = models.CharField(max_length=60, null=True)
     id_pokemon = models.ForeignKey(Pokemon, on_delete=models.CASCADE)
 
 class Narrador(models.Model):
