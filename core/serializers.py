@@ -37,10 +37,7 @@ class GolpesNaturaisSerializer(serializers.ModelSerializer):
     class Meta:
         model = GolpesNaturais
         fields = (
-            'evolucao',
-            'golpe_01',
-            'golpe_02',
-            'id_pokemon'
+            '__all__'
         )
 
 class AtributosBasaisSerializer(serializers.ModelSerializer):
