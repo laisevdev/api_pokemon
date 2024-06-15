@@ -61,11 +61,7 @@ class ComportamentoSerializer(serializers.ModelSerializer):
     class Meta:
         mdoel = Comportamento
         fields = (
-            'dieta_01', 
-            'dieta_02',
-            'habitat_01',
-            'habitat_02',
-            'id_pokemon'
+            '__all__'
         )
 
 class NarradorSerializer(serializers.ModelSerializer):
