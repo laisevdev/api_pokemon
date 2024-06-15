@@ -17,9 +17,8 @@ class Deslocamento(models.Model):
     id_pokemon = models.ForeignKey(Pokemon, on_delete=models.CASCADE)
 
 class GolpesNaturais(models.Model):
-    evolucao = models.CharField(max_length=60)
-    golpe_01 = models.CharField(max_length=60)
-    golpe_02 = models.CharField(max_length=60, null=True)
+    golpe_natural = models.CharField(max_length=60)
+    golpe_herdado = models.CharField(max_length=60, null=True)
     id_pokemon = models.ForeignKey(Pokemon, on_delete=models.CASCADE)
     
 
