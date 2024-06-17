@@ -18,7 +18,7 @@ class Deslocamento(models.Model):
 
 class GolpesNaturais(models.Model):
     golpe_natural = models.CharField(max_length=100)
-    golpe_herdado = models.CharField(max_length=100, null=True)
+    golpe_herdado = models.CharField(max_length=200, null=True)
     id_pokemon = models.ForeignKey(Pokemon, on_delete=models.CASCADE)
     
 
@@ -32,8 +32,7 @@ class AtributosBasais(models.Model):
     id_pokemon = models.ForeignKey(Pokemon, on_delete=models.CASCADE)
 
 class TiposHabilidades(models.Model):
-    tipo_01_img = models.ImageField(upload_to=None, height_field=None, width_field=None, null=True)
-    tipo_02_img = models.ImageField(upload_to=None, height_field=None, width_field=None, null=True)
+    tipo_01_img = models.ImageField()
     habilidade = models.CharField(max_length=100)
     alta_habilidade = models.CharField(max_length=100, null=True)
     id_pokemon = models.ForeignKey(Pokemon, on_delete=models.CASCADE)
