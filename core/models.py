@@ -18,17 +18,17 @@ class Deslocamento(models.Model):
 
 class GolpesNaturais(models.Model):
     golpe_natural = models.CharField(max_length=100)
-    golpe_herdado = models.CharField(max_length=200, null=True)
+    golpe_herdado = models.CharField(max_length=300, null=True)
     id_pokemon = models.ForeignKey(Pokemon, on_delete=models.CASCADE)
     
 
 class AtributosBasais(models.Model):
-    saude =  models.CharField(max_length=100, default='N/A')
-    ataque = models.CharField(max_length=100,  default='N/A')
-    defesa =  models.CharField(max_length=100, default='N/A')
-    ataque_especial =  models.CharField(max_length=100, default='N/A')
-    defesa_especial = models.CharField(max_length=100, default='N/A')
-    velocidade =  models.CharField(max_length=100, default='N/A')
+    saude =  models.IntegerField()
+    ataque = models.IntegerField()
+    defesa = models.IntegerField()
+    ataque_especial =  models.IntegerField()
+    defesa_especial = models.IntegerField()
+    velocidade =  models.IntegerField()
     id_pokemon = models.ForeignKey(Pokemon, on_delete=models.CASCADE)
 
 class TiposHabilidades(models.Model):
