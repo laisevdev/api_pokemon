@@ -32,7 +32,8 @@ class AtributosBasais(models.Model):
     id_pokemon = models.ForeignKey(Pokemon, on_delete=models.CASCADE)
 
 class TiposHabilidades(models.Model):
-    tipo_01_img = models.ImageField(upload_to='tipos_images/', max_length=300)
+    tipo_01_img = models.ImageField(upload_to='tipos_images/', max_length=300, default='N/A')
+    tipo_02_img = models.ImageField(upload_to='tipos_images/', max_length=300, default='N/A')
     habilidade = models.CharField(max_length=200)
     alta_habilidade = models.CharField(max_length=200, null=True)
     id_pokemon = models.ForeignKey(Pokemon, on_delete=models.CASCADE)
