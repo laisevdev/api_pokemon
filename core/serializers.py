@@ -83,7 +83,7 @@ class NarradorSerializer(serializers.ModelSerializer):
         model = Narrador
         fields = (
             'chance_captura',
-            'experience',
+            'experiencia',
             'id_pokemon'
         )
 
