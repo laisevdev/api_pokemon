@@ -2,14 +2,21 @@ from rest_framework import serializers
 from .models import Pokemon, Capacidades, Deslocamento, GolpesNaturais, AtributosBasais, TiposHabilidades, Comportamento, Narrador, Medidas, Procriacao
 
 class PokemonSerializer(serializers.ModelSerializer):
+    imagem = serializers.SerializerMethodField()
 
     class Meta:
         model = Pokemon
-        fields = (
+        fields = [
             'id',
             'nome_pokemon',
             'imagem'
-        )
+        ]
+
+    def get_imagem(self, obj):
+        request = self.context.get('request')
+        if obj.imagem and request:
+            return request.build_absolute_uri(obj.imagem.url)
+        return None
 
 class CapacidadesSerializer(serializers.ModelSerializer):
 
@@ -65,7 +72,7 @@ class TiposHabilidadesSerializer(serializers.ModelSerializer):
 class ComportamentoSerializer(serializers.ModelSerializer):
 
     class Meta:
-        mdoel = Comportamento
+        model = Comportamento
         fields = (
             '__all__'
         )
