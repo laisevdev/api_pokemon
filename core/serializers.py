@@ -1,8 +1,32 @@
 from rest_framework import serializers
 from .models import Pokemon, Capacidades, Deslocamento, GolpesNaturais, AtributosBasais, TiposHabilidades, Comportamento, Narrador, Medidas, Procriacao
 
+
+class CapacidadesSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Capacidades 
+        fields = (
+            'forca',
+            'inteligencia',
+            'salto',
+            'outras',
+            'id_pokemon'
+        )
+
+    
+class DeslocamentoSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Deslocamento
+        fields = (
+            'deslocamentos',
+            'id_pokemon'
+        )
+
 class PokemonSerializer(serializers.ModelSerializer):
-    imagem = serializers.SerializerMethodField()
+    imagem = serializers.ImageField(max_length=None, use_url=True)
+
 
     class Meta:
         model = Pokemon
@@ -17,27 +41,6 @@ class PokemonSerializer(serializers.ModelSerializer):
         if obj.imagem and request:
             return request.build_absolute_uri(obj.imagem.url)
         return None
-
-class CapacidadesSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Capacidades 
-        fields = (
-            'forca',
-            'inteligencia',
-            'salto',
-            'outras',
-            'id_pokemon'
-        )
-
-class DeslocamentoSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Deslocamento
-        fields = (
-            'deslocamentos',
-            'id_pokemon'
-        )
 
 class GolpesNaturaisSerializer(serializers.ModelSerializer):
 
