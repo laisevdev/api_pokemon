@@ -131,6 +131,10 @@ DATA_UPLOAD_MAX_NUMBER_FIELDS = 5000
 
 #DRF
 REST_FRAMEWORK = {
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '2/minute',
+        'user': '3/minute'
+    },
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
 }
